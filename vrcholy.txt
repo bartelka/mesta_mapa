@@ -1,0 +1,48 @@
+Bratislava;36;382
+Trnava;124;322
+Piešťany;169;260
+Trenčin;209;182
+Považská Bystrica;281;119
+Žilina;336;90
+Martin;368;130
+Čadca;344;29
+Ružomberok;438;127
+Liptovský Mikuláš;493;125
+Poprad;615;130
+Prešov;786;141
+Košice;793;218
+Michalovce;909;203
+Humenné;904;155
+Stropkov;857;86
+Svidník;840;54
+Bardejov;786;60
+Stará Ľubovňa;681;59
+Rožňava;660;242
+Rimavská Sobota;568;317
+Lučenec;506;329
+Zvolen;405;269
+Banská Bystrica;409;223
+Prievidza;313;214
+Dudince;362;378
+Nové Zámky;231;428
+Komárno;230;489
+Dunajská Streda;131;426
+Nitra;216;339
+Skalica;62;193
+Malacky;24;303
+Kúty;20;238
+Senica;83;231
+Námestovo;464;42
+Topolčany;230;271
+Žiar nad Hronom;355;266
+Brezno;496;201
+Dolný Kubín;436;89
+Levice;309;366
+Senec;91;365
+Štúrovo;332;479
+Detva;455;274
+Tisovec;552;235
+Galanta;150;374
+Plaveč;716;70
+Snina;955;137
+Turčianske Teplice;352;191
