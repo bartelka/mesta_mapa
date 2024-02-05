@@ -51,7 +51,7 @@ def into_the_deep(mesto):
             into_the_deep(mestecko)
 
 def into_the_width(mesto):
-    global navstivene_2
+    global navstivene_2, sused_slov
     zoznamik = []
     navstivene_2.append(mesto)
     zoznamik.append(mesto)
@@ -59,11 +59,20 @@ def into_the_width(mesto):
         print(zoznamik)
         for mesto, hod in mesta_hodnoty[zoznamik[0]].items():
             if mesto not in navstivene_2:
+                sused_slov[mesto] = sused_slov.get(mesto,zoznamik[0])
                 zoznamik.append(mesto)
                 navstivene_2.append(mesto)
         if len(zoznamik) != 0:
             zoznamik.remove(zoznamik[0])
 
+def cesticka(start, koniec):
+    global cesta
+    cesta.append(koniec)
+    if sused_slov[koniec] != start:
+        cesticka(start, sused_slov[koniec])
+    else:
+        cesta.append(start)
+        print(cesta[::-1])
 
 import tkinter as tk
 
@@ -72,6 +81,7 @@ win = tk.Tk()
 w = 1000
 h = 900
 
+sused_slov = {}
 mesta_bodky = {}
 #mestecka = mesta so suradnicami
 mestecka = {}
@@ -82,7 +92,7 @@ mesta_hodnoty = {}
 #navstivene mesta
 navstivene_1 = []
 navstivene_2 = []
-
+cesta = []
 ciary = []
 
 canvas = tk.Canvas(width=w, height=h, bg="white")
@@ -97,5 +107,11 @@ into_the_width("Bratislava")
 
 print(mesta_hodnoty)
 print(mesta_bodky)
+print(sused_slov)
+cesticka("Bratislava", "Košice")
+print(mesta_hodnoty["Bratislava"]["Malacky"])
 win.mainloop()
 #dudo.gvpt.sk zadanie -> grafy(hrany.txt, vrcholy.txt)
+#algoritmus do sirky aby vzika struktura {B:A, C:A, D:C}
+#napiste kratku funkciu, startovacie miesto, konecne miesto cestu
+#pre kazde mesto si budeme definovat predchodcu a vzdialenost, vyhladanie mesta s najmensou vzdialenostou a odstranis ju zo zoznamu nespracovane
