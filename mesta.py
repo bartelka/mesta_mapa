@@ -51,7 +51,7 @@ def into_the_deep(mesto):
             into_the_deep(mestecko)
 
 def into_the_width(mesto):
-    global navstivene
+    global navstivene_2
     zoznamik = []
     navstivene_2.append(mesto)
     zoznamik.append(mesto)
